@@ -1,3 +1,25 @@
+### Objective
+make a go sqlcipher that will use the latest cipher version and latest sqlite.
+all (mainly) used/related repo:
+- Zetetic LLC : https://github.com/sqlcipher/sqlcipher
+- LibTomCrypt : https://github.com/libtom/libtomcrypt
+- Yasuhiro Matsumoto (a.k.a mattn): https://github.com/mattn/go-sqlite3
+- Gdanko : https://github.com/gdanko/gorm-sqlcipher
+- Gorm : https://github.com/go-gorm/gorm
+- Mutecomm: https://github.com/mutecomm/go-sqlcipher.git
+
+Thanks to all of you!
+
+---
+Copyright (c) 2025, ZETETIC LLC All rights reserved.
+
+all other relevant license can be found in the ALL LICENSE folder. All use of this must reciprocate the licences there (strictly first, not strict last).
+
+
+---------
+## Original Author Text Below
+
+
 ## go-sqlcipher
 
 [![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://godoc.org/github.com/mutecomm/go-sqlcipher) [![CI](https://github.com/mutecomm/go-sqlcipher/workflows/CI/badge.svg)](https://github.com/mutecomm/go-sqlcipher/actions)

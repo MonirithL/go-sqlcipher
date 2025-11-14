@@ -3,13 +3,13 @@
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
 
+//go:build cgo
 // +build cgo
 
 package sqlite3
 
 import (
 	"database/sql"
-	"io/ioutil"
 	"os"
 	"path"
 	"testing"
@@ -23,7 +23,7 @@ func TestSimpleError(t *testing.T) {
 }
 
 func TestCorruptDbErrors(t *testing.T) {
-	dirName, err := ioutil.TempDir("", "sqlite3")
+	dirName, err := os.MkdirTemp("", "sqlite3")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -53,7 +53,7 @@ func TestCorruptDbErrors(t *testing.T) {
 }
 
 func TestSqlLogicErrors(t *testing.T) {
-	dirName, err := ioutil.TempDir("", "sqlite3")
+	dirName, err := os.MkdirTemp("", "sqlite3")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -80,7 +80,7 @@ func TestSqlLogicErrors(t *testing.T) {
 }
 
 func TestExtendedErrorCodes_ForeignKey(t *testing.T) {
-	dirName, err := ioutil.TempDir("", "sqlite3-err")
+	dirName, err := os.MkdirTemp("", "sqlite3-err")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -126,7 +126,7 @@ func TestExtendedErrorCodes_ForeignKey(t *testing.T) {
 }
 
 func TestExtendedErrorCodes_NotNull(t *testing.T) {
-	dirName, err := ioutil.TempDir("", "sqlite3-err")
+	dirName, err := os.MkdirTemp("", "sqlite3-err")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -182,7 +182,7 @@ func TestExtendedErrorCodes_NotNull(t *testing.T) {
 }
 
 func TestExtendedErrorCodes_Unique(t *testing.T) {
-	dirName, err := ioutil.TempDir("", "sqlite3-err")
+	dirName, err := os.MkdirTemp("", "sqlite3-err")
 	if err != nil {
 		t.Fatal(err)
 	}
